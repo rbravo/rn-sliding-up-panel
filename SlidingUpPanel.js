@@ -160,7 +160,7 @@ class SlidingUpPanel extends React.Component {
     }
 
     this._translateYAnimation.flattenOffset()
-    const cancelFlick = this.props.onDragEnd(-this._animatedValueY)
+    const cancelFlick = this.props.onDragEnd(-this._animatedValueY,gestureState)
 
     if (!this.props.allowMomentum || cancelFlick) {
       return
